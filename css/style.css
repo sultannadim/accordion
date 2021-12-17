@@ -1,0 +1,52 @@
+.d_flex{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+
+}
+.accordion{
+	margin: 0 auto;
+	width: 90%;
+}
+.acco_box{
+	margin: 20px;
+	position: relative;
+}
+.label{
+	padding: 20px;
+	position: relative;
+	background-color: #e74c3c;
+	color: #ffffff;
+	cursor: pointer;
+}
+.label::after{
+	content: '+';
+	position: absolute;
+	top: 50%;
+	right: 30px;
+	transform: translateY(-50%);
+	font-size: 30px;
+}
+.acco_content{
+	
+	position: relative;
+	height: 0px;
+	overflow: hidden;
+	overflow-y: auto;
+	transition: .5s;
+}
+.acco_content p{
+	padding: 15px 30px;
+}
+
+.acco_active .acco_content{
+	height: 150px;
+
+}
+.acco_active .label::after{
+	content: '-';
+	font-size: 50px;
+	top: 40%;
+	
+}
